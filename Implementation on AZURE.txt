@@ -1,0 +1,31 @@
+after logging in to the Microsoft Azure, on the search bar, search for "iot Central Application"
+click on it and create a new application
+fill in the required information, and name the resource any name you like
+in the template part select "custom application"
+clic on review + create
+
+After the resource has been created, go to resources, and click on the one you just created,
+
+on the right side, take note of the "iot Central Application URL" and click on the link and a new tab will open 
+
+now we need to create a device template before creating a device, go to device templates and click on it, then click on create device template, then click on "iot device" and click on next customize
+you can give the template any name then click on next/review and then click on create
+then you would need to select the custom model, then we need to add capability, these would direct our data to the right place, the capabilities are just like the columns in our dataframe, eg, temperature, humidity, etc,
+
+so click on add capability, and in the display name of the first one, the name is temperature, the capability type would be telemetry for all the capabilities then for Sementic type select temperature, do same for humidity and all other sensor data you would like to add.
+
+then go to views and select default views and then click on generate default dashboard views, you can deside to modify the capabilities,
+
+when you are done click on publish
+
+now go to the devices tab again and click on add a device
+give the device any name  and ID and then select the template you just created and published and then click on create
+ click on the device created and from the overview and raw data and you will see the template used and the capabilities added 
+ then click on connect and you will take note of 3 things
+ 	1. ID scope
+	2. Device ID
+and 	3. Primary key
+
+copy and paste these 3 things in the appropriate sections of the code and run the code,
+
+when you run the code, it creates a hotspot, Esp8266 HOTSPOT after connecting to it, you can manage your wifi settings and after successfully connecting to the internet, it would create the server and start logging the data on the iot central on Azure and you can view it in the raw data section of the device you created.
